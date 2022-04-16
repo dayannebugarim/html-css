@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+
+body{
+    background-color: rgb(222, 252, 245);
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+        ID:
+    Para personalizar apenas UM elemento.
+    É possível aplicar id e class a um mesmo elemento.
+    Em HTML é id    = em CSS é #
+        CLASS:
+    Permite personalizar VÁRIOS elementos.
+    É possível aplicar mais de uma classe a um elemento.
+    Em HTML é class = em CSS é .
+*/
+#principal{
+    text-align: center;
+    background-color: rgb(44, 81, 72);
+    color: white;
+}
+h1{
+    color: rgb(44, 81, 72);
+}
+h2{
+    color: rgb(78, 125, 113);
+}
+.basico{
+    color: rgb(78, 125, 113);
+    font-weight: bold;
+}
+.intermediario{
+    color: rgb(125, 121, 78);
+}
+.avançado{
+    color: rgb(125, 78, 78);
+}
+.destaque{
+    background-color: #9b9b4f7a;
+}

@@ -1,0 +1,14 @@
+height - altura
+width - largura
+border - borda
+padding(interno) - preenchimento (cria uma distancia entre a box e da borda)
+margin - margem (cria uma distância da  borda para fora)
+outline - contorno (da borda)
+
+TIPOS DE CAIXA:
+- box-level: 	se inicia em uma nova linha
+		sempre ocupa a largura total da tela
+		ex.: <div>
+- inline-level: se inicia ao final de algum conteúdo, na mesma linha (não quebra linha)
+		ocupa apenas a largura do conteúdo da caixa
+		ex.: <span>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acesar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no GitHub</a>.</p> <!-- Âncora (a)-->
+                                <!--
+                                Target:
+                                    _blank: abre o link em uma nova janela em branco
+
+                                    _self: abre o link na janela ou frame atual (padrão)
+
+                                    _top: 
+                                    
+                                    _parent: 
+                                -->
+
+                                <!--
+                                Rel:
+                                    next: link é para a próxima parte do documento atual
+
+                                    prev: link é para a parte anterior do documento atual
+
+                                    author: link para o site do autor do artigo atual
+
+                                    external: indica que é um link para outro site que não faz parte do site atual
+
+                                    nofollow: link para um site não endossado, como um link pago
+                                -->
+    <p>Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal gratuito no YouTube</a>.</p>
+                          
+    <h1>Usando links internos</h2>
+    <p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" target="_self" rel="next">segunda página</a>.</p>
+    <p>Você também pode aceesar a nossa <a href="noticias/pag003.html" target="_self" rel="next">página de notícias</a>.</p>
+
+    <h1>Links para download</h1>
+    <ul>
+        <!-- 
+        Parâmetro "download"-> inserir o nome do arquivo 
+        -->
+
+        <!-- 
+        Parâmetro "type"-> inserir o media type específico do tipo do arquivo, como:
+            .PDF:  application/pdf
+            .ZIP:  application/zip
+            .HTML: text/html
+            .CSS:  text/css
+            .JS:   text/javascript
+            .MP4:  video/mp4
+            .MP3:  audio/mpeg
+            .JPEG: image/jpeg
+            .PNG:  image/png
+            .TTF:  font/ttf 
+        -->
+        <li><a href="livro/10 - Ligações em toda parte.pdf" download="10 - Ligações em toda parte.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/10 - Ligações em toda parte.zip" download="10 - Ligações em toda parte.zip" type="application/zip">Livro compactado em ZIP</a></li>
+    </ul>
+</body>
+</html>

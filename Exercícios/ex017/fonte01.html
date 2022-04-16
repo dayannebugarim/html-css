@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+
+        body{
+            font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+            /* 
+            - Se o nome da fonte tiver mais de uma palavras ela precisa estar entre aspas simples. 
+            SAFE COMBINATIONS:
+            - Nomes de fontes separadas por vírgula: vai dar mais de uma opção de fonte ao navegador, caso ele não encontre.
+            - Também é possível deixar que o navegador escolha a fonte apenas declarando o tipo dela (serif, sans-serif, monospace...).
+
+            */
+            font-size: 1em;
+            /*
+            MEDIDAS ABSOLUTAS:
+            cm, mm, in(polegada), px(recomendado), 
+            não recomendados -> pt(ponto), pc(parsec)
+
+            MEDIDAS RELATIVAS:
+            em(recomendado), ex, rem, vw, vh, %
+            16px geralmente = 1em (porque 16px é o tamanho padrão)
+            */
+            font-weight: lighter;
+            /*
+            lighter, normal, bold, bolder
+            PESOS NUMÉRICOS: 100 a 900 
+            */
+            font-style: italic;
+            /*
+            normal, italic, oblique
+            */
+
+            /*text-decoration: underline;*/
+        }
+        h1{
+            /* shorthand font 
+
+            font-family: 'Work Sans', sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic;
+
+            ordem: font-style -> font-weight -> font-size -> font-family
+            */
+            font: italic bolder 3em 'Work Sans', sans-serif;
+        }
+        h2{
+            font: bold 2em 'Work Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore repellendus voluptas perferendis iste hic, exercitationem inventore modi, in, eligendi reprehenderit blanditiis dicta commodi incidunt cum tempore. Suscipit, praesentium neque? Eos. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit odit quia asperiores eum labore nam repellat quam, debitis repellendus, provident saepe totam incidunt necessitatibus ea distinctio veritatis. Hic, placeat magni.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem dolorem iure illo magnam nemo, nostrum facilis veritatis natus distinctio omnis consequatur accusantium earum ut quae, et ea mollitia cumque. Quod.</p>
+    
+    <h2>Subtítulo do Exercício</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis quod doloremque numquam commodi dignissimos architecto eos porro facilis fugiat? Voluptatum voluptates aliquid expedita explicabo eveniet debitis cumque hic a eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati fugit a officiis iste quisquam fuga sequi? Voluptas vitae incidunt laborum impedit nam ipsa exercitationem dolores voluptatibus, perspiciatis, neque pariatur?</p>
+</body>
+</html>

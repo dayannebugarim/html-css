@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        /* MUDAR A CARACTERÍSTICA DE UM ELEMENTO:
+            display: block;       -> vai ser um elemento do tipo box-level (quebra linha)
+            display: inline/inline-block -> vai ser um elemento do tipo inline-level (n quebra linha)
+        */
+        h1{ /* box-level */
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+
+            /* border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray; */
+
+            border: 10px solid darkslategray;
+
+            /* padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px; */
+
+            padding: 10px; 
+            /* 
+            Ordem: top right bottom left. 
+            - Se as quatro medidas forem iguais basta informar só uma vez.
+            - Também é possível informar apenas duas medidas, sendo a primeira para top e bottom e a outra para right e left.
+            */
+
+            /* margin: auto;  coloca a caixa centralizada na tela; se adapta ao tamanho da tela/navegador */
+
+            /* margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px; */
+
+            margin: 20px 20px 40px 20px;
+            /* 
+            margin: 20px auto 40px auto;
+            Calcula automático as margens right e left, centralizando a box
+            */
+
+            /* outline-width: 5px;
+            outline-style:  dashed;
+            outline-color: salmon; */
+
+            outline: 5px dashed salmon;
+            /* Ordem: width style color */
+        }
+        a{ /* inline-level */
+            /* border-width: 10px;
+            border-style: solid;
+            border-color: red; */
+
+            border: 10px solid red;
+
+            /* padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px; */
+
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa Box-Level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links</a> são exemplos de caixas inline-level. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>

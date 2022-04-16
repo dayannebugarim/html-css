@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <!--
+            Tag <source>:
+                media ->
+                    max-width: indica o tamanho MÁXIMO da tela para que a imagem indicada no parâmetro srcset seja carregada.
+                    min-width: indica o tamanho MÍNIMO da tela para que a imagem indicada no parâmetro srcset seja carregada.
+
+                srcset -> configura o nome da imagem q vai ser carregada quando o tamanho q foi passado no parâmetro for atingido.
+
+                type -> indica o media type da imagem (Ex.: image/png)
+        -->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <!--
+            !! COLOCAR OS SOURCE NA ORDEM CORRETA E ANTES DA IMG PADRÃO !!
+
+            DICA: usar +50px além do tamanho da imagem no parâmetro media pra considerar o scroll lateral do navegador.
+        -->
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <!--
+        <audio src="midia/believe.mp3" controls autoplay></audio>
+    -->
+    <!-- MP3 OGG WAV-->
+
+    <audio preload="metadata" autoplay controls loop>
+        <!--
+            Tag <audio>:
+                preload -> indica se o áudio será pré carregado ou não, aceita 3 valores:
+                    auto (padrão) -> carrega o arquivo de áudio inteiro assim que a página for carregada, mesmo que o úsuario nunca aperte play (não recomendado)
+
+                    metadata -> carrega apenas as informações sobre o arquivo (tamanho, tempo, informações de direito, etc)
+
+                    none -> não carrega nada até que o usuário aperte play ou um script inicie a reprodução
+                
+                controls -> apresenta o player na tela. (Caso não seja colocado na tag <audio>, o controle será transparente e o usuário não poderá interagir com ele)
+                
+                autoplay -> inicia a reprodução do áudio assim que a página é carregada. (não está funcionando '-')
+
+                loop -> o áudio ficará se repetindo assim que terminar a reprodução.
+        -->
+        <source src="midia/believe.mp3" type="audio/mpeg">
+        <source src="midia/believe.ogg" type="audio/ogg">
+        <source src="midia/believe.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. Clique <a href="midia/believe.mp3">aqui</a> para baixar o arquivo MP3.</p>
+    </audio>
+
+    
+</body>
+</html>
