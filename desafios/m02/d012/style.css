@@ -11,6 +11,9 @@
     margin: 0;
 }
 
+body{
+    min-height: 100vh;
+}
 header{
     font-family: var(--fonte_header);
     font-size: 1em;
@@ -20,8 +23,9 @@ header{
     color: white;
     padding: 30px;
 }
-.letra_destaque{
-    font-size: 1.3em;
+header > h1{
+    font-variant: small-caps;
+    font-size:3em;
 }
 header > h2{
     font-size: 1em;
@@ -44,9 +48,9 @@ main{
 
 .bloco{
     background-attachment: scroll;
-    padding-top: 80px;
-    padding-bottom: 70px;
-    padding-left: 20px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
 }
 #img1{
     color: white;
