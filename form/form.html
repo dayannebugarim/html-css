@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formulário</h1>
+    </header>
+    <main>
+        <!--
+        MÉTODOS
+            get -> os dados serão adicionados após a url. Recomendado para buscas e etc.
+
+            post -> os dados serão enviados por pacote. Recomendado para dados importantes, como nome, cpf, numero de cartão de crédito... pois é um método mais seguro.
+
+        ACTION:
+            aqui é informado para onde os dados serão enviados, como para um banco de dados.
+        -->
+        <form method="post" action="">
+            <fieldset id="usuario">
+                <legend>Identificação do Usuário</legend>
+                <!-- 
+                    size: o máximo de caracteres que será exibido no campo
+
+                    maxlength: o máximo de caracteres que será permitido no input
+
+                    placeholder: texto predefinido no campo
+                -->
+                <p>
+                    <label for="cNome">Nome:</label> <input id="cNome" type="text" size="20" maxlength="30" placeholder="Digite seu nome">
+                </p>
+
+                <p>
+                    <label for="cSenha">Senha:</label> <input id="cSenha" type="password" size="10" maxlength="8" placeholder="Digite sua senha">
+                </p>
+
+                <p>
+                    <label for="cMail">E-mail:</label> <input id="cMail" type="email" size="20" maxlength="40" placeholder="Digite seu email">
+                </p>
+
+                <fieldset id="sexo">
+                    <legend>Sexo</legend>
+                    <!--
+                        No tipo radio (seleção por bolinhas), é necessário que cada opção possua o mesmo name para que seja possível selecionar apenas uma delas.
+
+                        label -> etiqueta; permite relacionar um elemento a tal coisa. 
+                        Assim é possível selecionar uma caixa de seleção apenas clicando no nome do elemento, por exemplo.
+
+                        [input] checked -> deixa uma opção marcada por padrão
+                    -->
+                        <p>
+                            <input type="radio" name="tSexo" id="cMasc" checked><label for="cMasc">Masculino</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
+                        </p>
+                    
+                </fieldset>
+                <p>
+                    <label for="cNasc">Data de Nascimento:</label> <input id="cNasc" type="date" name="">
+                </p>
+            </fieldset>
+            
+            <fieldset id="endereco">
+                <legend>Endereço do Usuário</legend>
+                    <p>
+                        <label for="cLogr">Logradrouro:</label> <input id="cLogr" type="text" size="13" maxlength="80" placeholder="Endereço">
+                    </p>
+                    <p>
+                        <label for="cNum">Número:</label> <input type="number" id="cNum" min="0" max="99999" placeholder="Número da Casa">
+
+                        <!--
+                            [input] type="number":
+                            é possível setar os números mínimos e máximos permitidos no input através do min e max.
+                        -->
+                    </p>
+                    <p>
+                        <label for="cEst">Estado:</label>
+                        <!--
+                            SELECT:
+                            Cria uma caixa de opções selecionáveis.
+
+                            [optgroup] label="" -> faz um agrupamento de opções
+
+                            [option] selected -> deixa uma opção selecionada por padrão
+                            [option] value="" -> determina o dado que será enviado para o banco de dados caso a opção seja selecionada. Sem um value setado, será enviado a informação que está na própria opção.
+                        -->
+                        <select name="tEst" id="cEst">
+                            <optgroup label="Nordeste">
+                                <option value="CE">
+                                    Ceará
+                                </option>
+                                <option value="PE">
+                                    Pernambuco
+                                </option>
+                            </optgroup>
+
+                            <optgroup label="Sudeste">
+                                <option value="RJ">
+                                    Rio de Janeiro
+                                </option>
+                                <option value="SP" selected>
+                                    São Paulo
+                                </option>
+                                <option value="MG">
+                                    Minas Gerais
+                                </option>
+                            </optgroup>
+
+                            <optgroup label="Sul">
+                                <option value="PR">
+                                    Paraná
+                                </option>
+                                <option value="SC">
+                                    Santa Catarina
+                                </option>
+                                <option value="RS">
+                                    Rio Grande do Sul
+                                </option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="cCid">Cidade:</label> <input type="text" id="cCid" placeholder="Cidade" size="20" maxlength="40" list="cidades">
+                        <!--
+                            datalist -> a medida que o usuário escreve, aparecerão opções selecionáveis parecidas que estão contidas na lista (sistema de auto-complemento)
+                        -->
+                        <datalist id="cidades">
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Nova Iguaçu"></option>
+                            <option value="Niterói"></option>
+                            <option value="Belford Roxo"></option>
+                        </datalist>
+                    </p>
+            </fieldset>
+
+            <fieldset id="mensagem">
+                <legend>Mensagem do Usuário</legend>
+                    <p>
+                        <label for="cUrg">Grau de Urgência:</label>
+                        Mín<input type="range" id="cUrg" min="0" max="10" step="2">Máx
+                    </p>
+                    <p>
+                        <label for="cMsg">Mensagem:</label><textarea name="tMsg" id="cMsg" cols="30" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+                    </p>
+            </fieldset>
+
+            <fieldset id="pedido">
+                <legend>Quero um Google Glass</legend>
+                    <p>
+                        <input type="checkbox" name="cPed" id="cPed" checked><label for="cPed">Gostaria de adquirir um Google Glass quando disponível.</label>
+                    </p>
+                    <p>
+                        <label for="cCor">Cor: </label><input type="color" id="cCor" value="#0000ff">
+                    </p>
+                    <p>
+                        <label for="cQtd">Quantidade:</label><input type="number" id="cQtd" min="0" max="5" value="0">
+                    </p>
+                    <p>
+                        <label for="cTot">Preço Total: R$</label><input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly>
+                        <!--
+                            [input] readonly -> o campo fica disponível apenas para leitura
+                        -->
+                    </p>
+            </fieldset>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+</body>
+</html>
