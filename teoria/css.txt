@@ -1,0 +1,127 @@
+list-style-type: none; -> tira a marcação da lista
+letter-spacing -> espaçamento entre as letras
+line-height -> espaçamento entre as linhas
+word-spacing -> espaçamento entre palavras
+
+box-sizing: content-box (padrão)
+	    border-box  (as propriedades de largura (width) e 
+			de altura (height) incluem o tamanho 
+			padding size e a propriedade border, 
+			mas não incluem a propriedade margin)
+
+white-space:
+	normal (continua o fluxo normal do texto)
+	nowrap (sem quebra de linha)
+text-overflow -> determina o comportamento do texto quando 
+		chegar ao limite do overflow
+	ellipsis (coloca 3 pontos ao final do texto quando 
+		chega ao limite)
+
+DISPLAY: flex;
+ (relacionados ao elemento pai)
+	flex-direction: column (comportamento block)
+			column-reverse (ordem reversa)
+			row (comportamento inline)
+			row-reverse (ordem reversa)
+	
+	flex-wrap: nowrap (padrão - permite que o conteúdo extravase de seu container)
+		   wrap (quebra linha se chegar ao limite do container)
+	
+	flex-flow (short hand): [flex-direction] [flex-wrap]
+
+	justify-content (horizontal):   flex-start (padrão - os itens começar da esquerda)
+			 		flex-end (os itens começam da direita)
+			 		center (centraliza horizontalmente)
+					space-between (espaçamento entre os elementos, 
+							mas não no inicio e fim)
+					space-around (no inicio e fim é adicionado metade 
+								do espaçamento)
+					space-evenly (espaçamento igual do inicio ao fim, 
+  							entre todos os elementos)
+	
+	align-items (vertical): stretch (padrão - ocupa a altura total do container)
+				flex-start (os itens começam de cima)
+			 	flex-end (os itens começam de baixo)
+				center (centraliza verticalmente)
+				baseline (toma como base os textos para alinhar)
+	
+	align-content (alinha todo o bloco/todos os itens):
+			flex-start
+			flex-end
+			center
+			space-around
+			space-between
+			stretch
+
+ (relacionado ao elemento filho)		
+	flex-grow (crescimento do elemento filho em relação ao elemento pai):
+		  (divisão uniforme dos elementos filhos)
+	flex (permite que elementos se comportem com tamanhos específicos)				
+
+POSITION:
+	static (padrão)
+
+	relative (altera a posição do elemento tendo como referência a posição 
+		inicial)
+		top: x
+		left: x
+		right: x
+		bottom: x
+		z-index: -x a 999 (desloca o objeto para trás ou para frente
+		em relação a outro(s) objeto(s).
+
+	absolute (altera a posição do elemento tendo como referência
+		 o elemento em que ele está contido; para isso, é necessário 
+		 que o elemento pai tenha uma posição diferente de static)
+		top: x
+		left: x
+		right: x
+		bottom: x
+		z-index: -x a 999 (desloca o objeto para trás ou para frente
+		em relação a outro(s) objeto(s).
+
+	fixed (o objeto fica fixo na mesma posição, independente da rolagem)
+		top: x
+		left: x
+		right: x
+		bottom: x
+		z-index: -x a 999 (desloca o objeto para trás ou para frente
+		em relação a outro(s) objeto(s).
+
+	sticky (o objeto fica fixo em relação a rolagem da página)
+		top: x
+		left: x
+		right: x
+		bottom: x
+		z-index: -x a 999 (desloca o objeto para trás ou para frente
+		em relação a outro(s) objeto(s).
+	
+OVERFLOW (só funciona se a altura estiver especificada):
+	visible (padrão): mostra todo o conteudo, independente dele estar 
+			  sendo extravasado do elemento em que está contido.
+
+	hidden: mostra apenas o que se encaixa dentro do elemento que está contido.
+
+	scroll: cria uma barra de rolagem (mesmo que não seja necessário).
+	
+	auto: se necessário, criará a barra de rolagem automaticamente.
+
+FLOAT (um elemento deve ser retirado do seu fluxo normal e colocado ao longo do lado 
+	direito ou esquerdo do seu containêr, onde textos  e elementos em linha irão
+	se posicionar ao seu redor):
+	left
+	right
+	none
+
+CLEAR (limpa um ponto de flutuação):
+	both
+	left
+	right
+	none
+
+OPACITY: 0.0 - 1.0;
+	
+PSEUDO-CLASSE:
+	:focus -> quando algo está selecionado
+	a:link -> link não visitado
+	a:visited -> link visitado

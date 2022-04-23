@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Overflow</title>
+    <style>
+        div{
+            background: gray;
+            width: 70vw;
+            height: 20vh;
+            overflow: auto;
+            /* 
+            OVERFLOW (só funciona se a altura estiver especificada):
+            
+                visible (padrão): mostra todo o conteudo, independente dele estar extravasado do elemento em que está contido.
+
+                hidden: mostra apenas o que se encaixa dentro do elemento que está contido.
+
+                scroll: cria uma barra de rolagem (mesmo que não seja necessário).
+                
+                auto: se necessário, criará a barra de rolagem automaticamente.
+            */
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando a propriedade Overflow</h1>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit soluta reiciendis, nulla enim facere quidem doloremque, vitae neque ex incidunt, maxime numquam corrupti quia labore voluptatem corporis vero quisquam ullam.</p>
+        <p>Sequi, libero. Voluptatem veritatis quis deserunt, iure accusamus vero unde maxime. Placeat, adipisci, illo non quo velit animi deleniti blanditiis aspernatur fuga vel exercitationem, dignissimos est dicta vero molestias nihil!</p>
+        <p>Officiis reprehenderit quaerat deleniti iusto blanditiis animi eos veniam. Autem iure asperiores molestiae dicta facere adipisci reiciendis, veritatis, fuga eveniet aspernatur iste libero earum, quidem temporibus pariatur ullam cumque veniam?</p>
+        <p>Corrupti earum commodi dolorum ipsam? Eveniet nesciunt vel praesentium voluptate non saepe sunt natus culpa ullam soluta fuga sit alias, commodi dicta adipisci placeat illo veniam? Hic quasi perspiciatis autem.</p>
+    </div>
+</body>
+</html>
